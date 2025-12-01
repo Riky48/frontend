@@ -1,0 +1,214 @@
+:root {
+    /* Paleta base */
+    --color-bg: #121212;
+    /* Fondo general oscuro */
+    --color-surface: #1e1e2f;
+    /* Fondos de secciones, aside, tarjetas */
+    --color-primary: #7c3aed;
+    /* Acento violeta (botones, enlaces) */
+    --color-secondary: #f59e0b;
+    /* Acento naranja suave */
+    --color-border: #2c2c3a;
+    /* Bordes sutiles */
+    --color-text: #e4e4e7;
+    /* Texto principal */
+    --color-muted: #a1a1aa;
+    /* Texto secundario */
+    --color-hover: #9333ea;
+    /* Hover violeta más fuerte */
+    --color-alert: #ef4444;
+    /* Para errores o alertas */
+
+    /* Nav específico */
+    --color-nav: #18181b;
+}
+
+/* NAV BASE */
+nav {
+  position: fixed;
+  width: 20vw;
+  min-width: 200px;
+  background-color: var(--color-nav);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  height: 100vh;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+ 
+}
+
+/* Imagen nav */
+.imgnav {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgnav img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Buscador nav */
+.searchnav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.searchnav input {
+  width: 85%;
+  border-radius: 20px;
+  padding: 0.7rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-border);
+  color: var(--color-text);
+}
+.searchnav input:focus {
+  border: 1px solid var(--color-hover);
+  outline: none;
+}
+
+/* Opciones nav */
+.optionsnav {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.optionsnav a {
+  color:var(--color-primary);  
+  text-decoration: none;
+  width: 100%;
+}
+.iconhover {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  background-color: var(--color-border);
+  border-radius: 20px;
+  padding: 0 0.5rem;
+}
+.iconhover:hover {
+  background-color: var(--color-hover);
+  color: var(--color-text);
+}
+.iconhover img {
+  width: 25px;
+  height: 25px;
+}
+.iconhover p {
+  margin: 0;
+  flex: 1;
+  font-size: 1.1rem;
+}
+
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1101;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-nav);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1100; /* sobre el marketplace */
+  }
+
+  nav.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1101; /* sobre nav */
+  }
+
+  .main-content {
+   
+    width: 100%;
+   
+  }
+
+  /* Overlay opcional */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1099; /* debajo del nav pero encima del main */
+  }
+
+  .overlay.show {
+    display: block;
+  }
+}
+
+.cart-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.cart-button img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* si navbar es oscura, pone el ícono blanco */
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-button:hover img {
+  transform: scale(1.1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  line-height: 1;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
