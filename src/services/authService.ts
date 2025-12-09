@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/auth';
+const API_URL = 'backend-production-a6eac.up.railway.app/auth';
 
 export const registerUser = async (userData: any) => {
     try {
