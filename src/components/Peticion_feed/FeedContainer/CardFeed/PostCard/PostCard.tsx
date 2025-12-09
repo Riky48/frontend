@@ -60,7 +60,7 @@ export const PostCard: React.FC<Props> = ({
                                 case "image":
                                     return (
                                         <img
-                                            src={`http://localhost:3000/${m.src}`}
+                                            src={`https://backend-production-a6eac.up.railway.app/${m.src}`}
                                             alt={post.title}
                                             className="rounded-2xl shadow-md"
                                         />
@@ -68,7 +68,7 @@ export const PostCard: React.FC<Props> = ({
                                 case "video":
                                     return (
                                         <video
-                                            src={`http://localhost:3000/${m.src}`}
+                                            src={`https://backend-production-a6eac.up.railway.app/${m.src}`}
                                             controls
                                             className="rounded-2xl shadow-md"
                                         />
@@ -76,7 +76,7 @@ export const PostCard: React.FC<Props> = ({
                                 default:
                                     return (
                                         <a
-                                            href={`http://localhost:3000/${m.src}`}
+                                            href={`https://backend-production-a6eac.up.railway.app/${m.src}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >

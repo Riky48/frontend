@@ -98,13 +98,13 @@ export const Comentarios = ({ postId }: Props) => {
     }, [postId]);
 
     return (
-        <div className="mt-4">
+        <div className="mt">
             <h3 className="text-xl font-semibold mb-2">Comentarios</h3>
 
-        
-            <div className="space-y-3">
+
+            <div className="space">
                 {comments.map(comment => (
-                    <div key={comment.id_comment} className="p-3 border rounded">
+                    <div key={comment.id_comment} className="comment">
                         <b>
                             {comment.user
                                 ? `${comment.user.name_} ${comment.user.last_name}
@@ -126,9 +126,9 @@ export const Comentarios = ({ postId }: Props) => {
                 )}
             </div>
 
-            {/* Formulario */}
+
             {token && (
-                <form onSubmit={handleSubmit} className="mt-4 space-y-2">
+                <form onSubmit={handleSubmit} className="formContainerComment">
                     <textarea
                         value={content}
                         onChange={(e) => setContent(e.target.value)}

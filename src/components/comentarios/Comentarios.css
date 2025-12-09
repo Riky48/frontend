@@ -1,0 +1,30 @@
+.mt{
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+}
+
+.mt .space{
+    border-top: 1px solid var(--color-border);
+    padding: 0.5rem;
+}
+
+.mt .space .comment{
+    border: 1px solid var(--color-border);
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+    color: var(--color-text);
+}
+.formContainerComment textarea{
+    width: 100%;
+    height: 3rem;
+}
+.formContainerComment button{
+    margin-top: 0.5rem;
+    width: 20%;
+    height: 2rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
