@@ -25,7 +25,7 @@ export const Comentarios = ({ postId }: Props) => {
     // === Obtener comentarios ===
     const fetchComments = async () => {
         try {
-            const res = await fetch(`https://github.com/Riky48/frontend/blob/main/src/services/api.tsx/comentarios/${postId}`, {
+            const res = await fetch(`https://backend-production-a6eac.up.railway.app//comentarios/${postId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -62,7 +62,7 @@ export const Comentarios = ({ postId }: Props) => {
         setLoading(true);
 
         try {
-            const res = await fetch("https://github.com/Riky48/frontend/blob/main/src/services/api.tsx/comentarios", {
+            const res = await fetch("https://backend-production-a6eac.up.railway.app//comentarios", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
