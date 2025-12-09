@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/authContext";
+import './Comentarios.css';
 
 type Comment = {
     id_comment: number;
