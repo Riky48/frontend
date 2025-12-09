@@ -17,7 +17,7 @@ export const GalleriaFeed: React.FC<GalleriaFeedProps> = ({ multimedia }) => {
     title: string | undefined; src: string 
 }) => {
     const ext = item.src.split(".").pop()?.toLowerCase();
-    const fullSrc = `backend-production-a6eac.up.railway.app/${item.src}`;
+    const fullSrc = `https://backend-production-a6eac.up.railway.app/${item.src}`;
 
     if (["jpg", "jpeg", "png", "gif", "webp"].includes(ext ?? "")) {
       return (
