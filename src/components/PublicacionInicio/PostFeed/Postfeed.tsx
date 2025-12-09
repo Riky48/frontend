@@ -11,7 +11,7 @@ const PostFeed = async ({ formData, handleCloseClick }: Props): Promise<void> =>
       return;
     }
 
-    const res = await fetch('http://localhost:3000/feed/posts', {
+    const res = await fetch('backend-production-a6eac.up.railway.app/feed/posts', {
       method: 'POST',
       body: formData,
       headers: {
