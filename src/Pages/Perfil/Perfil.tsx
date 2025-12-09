@@ -48,7 +48,7 @@ function Perfil() {
   useEffect(() => {
     if (!token) return;
 
-    fetch('http://localhost:3000/auth/me', {
+    fetch('https://backend-production-a6eac.up.railway.app/auth/me', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {
@@ -65,7 +65,7 @@ function Perfil() {
   // ------------------ CARGAR PERFIL MUSICAL ------------------
   const fetchMusicianProfile = async (id: number) => {
     try {
-      const response = await fetch(`http://localhost:3000/perfil/musical/${id}`, {
+      const response = await fetch(`https://backend-production-a6eac.up.railway.app/perfil/musical/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -138,7 +138,7 @@ function Perfil() {
     };
 
     try {
-      const response = await fetch(`http://localhost:3000/perfil/musical/${userId}`, {
+      const response = await fetch(`https://backend-production-a6eac.up.railway.app/perfil/musical/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
