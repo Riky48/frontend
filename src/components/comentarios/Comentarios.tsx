@@ -62,7 +62,7 @@ export const Comentarios = ({ postId }: Props) => {
         setLoading(true);
 
         try {
-            const res = await fetch("http://localhost:3000/comentarios", {
+            const res = await fetch("backend-production-a6eac.up.railway.app/comentarios", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
