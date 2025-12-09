@@ -7,8 +7,12 @@ export const asyncDeletePost = async (
     setActivePostId: React.Dispatch<React.SetStateAction<number | null>>
 ): Promise<void> => {
     try {
+        const token = localStorage.getItem('token');
         const response = await fetch(`https://backend-production-a6eac.up.railway.app/posts/${id}`, {
             method: "DELETE",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
         });
 
         if (response.ok) {

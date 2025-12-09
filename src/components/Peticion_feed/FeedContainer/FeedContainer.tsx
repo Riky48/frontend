@@ -73,11 +73,12 @@ export const FeedContainer = () => {
       const response = await fetch(`https://backend-production-a6eac.up.railway.app/feed/${id_post}`, {
         method: "PATCH",
         headers: {
-          "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, content }), // Enviamos id
+        body: JSON.stringify({ title, content })
       });
+
 
       if (!response.ok) throw new Error(`Error ${response.status} al editar el post`);
 
