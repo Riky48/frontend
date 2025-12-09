@@ -19,7 +19,7 @@ export const FeedContainer = () => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch("http://localhost:3000/feed/users", {
+        const response = await fetch("backend-production-a6eac.up.railway.app/feed/users", {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -42,7 +42,7 @@ export const FeedContainer = () => {
   const asyncDeletePost = async (id: number) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3000/feed/posts/${id}`, {
+      const response = await fetch(`backend-production-a6eac.up.railway.app/feed/posts/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`,
