@@ -7,7 +7,7 @@ export const asyncDeletePost = async (
     setActivePostId: React.Dispatch<React.SetStateAction<number | null>>
 ): Promise<void> => {
     try {
-        const response = await fetch(`http://localhost:3000/posts/${id}`, {
+        const response = await fetch(`backend-production-a6eac.up.railway.app/posts/${id}`, {
             method: "DELETE",
         });
 
