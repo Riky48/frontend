@@ -29,7 +29,7 @@ function RegisterForm() {
     });
 
     try {
-      const response = await fetch("https://backend-production-a6eac.up.railway.app//auth/register", {
+      const response = await fetch("https://backend-production-a6eac.up.railway.app/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
