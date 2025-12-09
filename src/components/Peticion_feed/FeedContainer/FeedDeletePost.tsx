@@ -8,7 +8,7 @@ export const asyncDeletePost = async (
 ): Promise<void> => {
     try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://backend-production-a6eac.up.railway.app/posts/${id}`, {
+        const response = await fetch(`https://backend-production-a6eac.up.railway.app/feed/posts/${id}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${token}`
