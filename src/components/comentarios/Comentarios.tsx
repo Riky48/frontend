@@ -25,7 +25,7 @@ export const Comentarios = ({ postId }: Props) => {
     // === Obtener comentarios ===
     const fetchComments = async () => {
         try {
-            const res = await fetch(`http://localhost:3000/comentarios/${postId}`, {
+            const res = await fetch(`backend-production-a6eac.up.railway.app/comentarios/${postId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
