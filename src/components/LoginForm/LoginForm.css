@@ -39,15 +39,16 @@
 
 .logindiv {
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    height: 30dvh;
     justify-self: center;
     flex-direction: column;
     text-align: center;
     align-items: center;
     background-color: var(--color-surface);
     border-radius: 15px;
-    margin-top: 40px;
+    margin-top: 3rem;
+    overflow:hidden;
 }
 
 .login {

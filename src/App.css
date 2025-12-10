@@ -1,6 +1,7 @@
 * {
-  padding: 0%;  
-  margin: 0%;
+  padding: 0;  
+  margin: 0;
+  box-sizing: border-box;
 }
 .app-container {
   display: flex;     /* siempre fila */
@@ -11,8 +12,10 @@
 .main-content {
   /* flex: 1; */
   width: 100%;
+
   background-color: #1e1e2f;
   overflow-y: auto;
+  overflow-x: hidden;
   transition: margin-left 0.3s ease;
 }
 
