@@ -1,5 +1,6 @@
 import LoginForm from '../../components/LoginForm/LoginForm';
 import './Login.css';
+import './LoginResponsive.css';
 import RegisterForm from '../../components/RegisterForm/RegisterForm';
 import { useState} from 'react';
 
@@ -13,7 +14,7 @@ function Login() {
 
 
     return (
-        <>
+        <div className="loginContainer">
             <div className="body">
                 <div className="header">
                     <h1>Riff and Rate</h1>
@@ -28,7 +29,7 @@ function Login() {
                 </div>
             </div>
             <div className="footer">© 2025 Marketplace Músicos - Todos los derechos reservados.</div>
-        </>
+        </div>
     )
 }
 

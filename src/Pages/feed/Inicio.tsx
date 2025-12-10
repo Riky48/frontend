@@ -15,11 +15,11 @@ export function Inicio() {
                     </div>
                     
                 </main>
-                <div className="contacts">
+                {/* <div className="contacts">
                     <div className="suggContact">
 
                     </div>
-                </div>
+                </div> */}
             </div>
         </>
     )

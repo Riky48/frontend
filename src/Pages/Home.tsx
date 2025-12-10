@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
+import './HomeResponsive.css'
 import logo from '../assets/logo.png';
 import { useEffect, useRef } from 'react';
 

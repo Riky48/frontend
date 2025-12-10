@@ -7,9 +7,9 @@ html, body {
   background-color: #1e1e2f;
 }
 
-.main-content {
-  padding: 2rem;
+.profile-content {
   min-height: 100vh;
+  padding: 2rem;
   box-sizing: border-box;
   overflow-y: auto; /* habilita scroll */
 }
@@ -129,7 +129,7 @@ html, body {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .main-content {
+  .profile-content {
     padding: 1rem;
   }
 

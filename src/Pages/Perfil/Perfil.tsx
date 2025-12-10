@@ -206,7 +206,7 @@ function Perfil() {
 
   // ------------------ RENDER ------------------
   return (
-    <div className="main-content">
+    <div className="profile-content">
       {/* TARJETA DE PERFIL */}
       <section
         className="profile-card"

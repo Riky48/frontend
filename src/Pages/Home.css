@@ -1,12 +1,9 @@
-
-
 .containerHome {
   width: 100vw;
   background: var(--color-surface);
   z-index: 1;
-  min-height: 100vh;   /* permite scroll */
-  position: relative;  /* evita el recorte */
-
+  max-height: 100vh;   /* permite scroll */
+  position: fixed;  /* evita el recorte */
 }
 
 /* ====== HERO ====== */
@@ -97,7 +94,7 @@
 }
 
 .buttons {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
